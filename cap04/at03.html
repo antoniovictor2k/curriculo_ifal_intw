@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listas Avançadas — Cap. 4 / Ativ. 3</title>
+  <style>
+    /* Configurações Gerais */
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #fcfcfc;
+    }
+
+    h1 {
+      color: #2c3e50;
+      border-bottom: 3px solid #3498db;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+
+    section {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: #2980b9;
+      font-size: 1.4rem;
+      margin-top: 0;
+      border-left: 5px solid #3498db;
+      padding-left: 15px;
+    }
+
+    /* Estilização das Listas Ordenadas e Não Ordenadas */
+    ol, ul {
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Sublistas (Aninhamento) */
+    li ol, li ul {
+      margin-top: 8px;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+      padding: 10px 30px;
+    }
+
+    /* Estilização do Glossário (Definition List) */
+    dl {
+      background: #f4f7f6;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    dt {
+      font-weight: bold;
+      color: #e67e22;
+      font-size: 1.1rem;
+      margin-top: 15px;
+    }
+
+    dt::after {
+      content: ":";
+    }
+
+    /* Quando dois DTs aparecem juntos (Sinônimos) */
+    dt + dt {
+      margin-top: 5px;
+    }
+
+    dd {
+      margin-left: 20px;
+      color: #555;
+      font-style: italic;
+      border-left: 2px solid #bdc3c7;
+      padding-left: 10px;
+      margin-bottom: 5px;
+    }
+
+    /* Botão de Voltar */
+    .btn-voltar {
+      display: inline-block;
+      text-decoration: none;
+      color: #3498db;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-voltar:hover {
+      transform: translateX(-5px);
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <h1>Guia de Referência Rápida — Desenvolvimento Web</h1>
+
+  <section>
+    <h2>1. Roteiro de Estudos</h2>
+    <p><strong>Etapa 1 — Fundamentos:</strong></p>
+    <ol type="1">
+      <li>HTML e semântica
+        <ol type="a">
+          <li>Estrutura básica</li>
+          <li>Elementos semânticos</li>
+        </ol>
+      </li>
+      <li>CSS Básico</li>
+      <li>Lógica de Programação</li>
+    </ol>
+    
+    <p><strong>Etapa 2 — Estilização Avançada:</strong></p>
+    <ol type="1" start="4">
+      <li>Flexbox e Grid
+        <ol type="a">
+          <li>Layouts responsivos</li>
+        </ol>
+      </li>
+      <li>Animações CSS</li>
+      <li>Frameworks Modernos</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>2. Ranking de Tecnologias (Importância)</h2>
+    <ol reversed>
+      <li><p><strong>JavaScript:</strong> A alma da interatividade na web moderna.</p></li>
+      <li><p><strong>CSS3:</strong> Responsável por toda a estética e layout.</p></li>
+      <li><p><strong>HTML5:</strong> A base estrutural essencial de qualquer página.</p></li>
+      <li><p><strong>Git:</strong> Fundamental para controle de versão e trabalho em equipe.</p></li>
+      <li><p><strong>HTTP/HTTPS:</strong> O protocolo que permite a comunicação na rede.</p></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>3. Glossário Técnico</h2>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Linguagem de marcação utilizada na construção de páginas Web.</dd>
+      
+      <dt>CSS</dt>
+      <dd>Mecanismo para adicionar estilo a um documento web.</dd>
+
+      <dt>JavaScript</dt>
+      <dd>Linguagem de programação interpretada estruturada.</dd>
+      <dd>Utilizada principalmente para criar interatividade no lado do cliente.</dd>
+
+      <dt>DOM</dt>
+      <dt>Document Object Model</dt>
+      <dd>Interface de programação para documentos HTML e XML.</dd>
+
+      <dt>HTTP</dt>
+      <dt>HTTPS</dt>
+      <dd>Protocolos de transferência de dados entre cliente e servidor.</dd>
+
+      <dt>API</dt>
+      <dd>Conjunto de rotinas e padrões estabelecidos por um software para a utilização de suas funções.</dd>
+
+      <dt>URL</dt>
+      <dd>Endereço de um recurso na rede.</dd>
+
+      <dt>DNS</dt>
+      <dd>Sistema que converte nomes de domínios em endereços IP.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>4. Mapa de Tecnologias</h2>
+    <ul>
+      <li><strong>Desenvolvimento Web</strong>
+        <ul>
+          <li>Frontend
+            <ul>
+              <li>Linguagens: HTML, CSS e JavaScript</li>
+              <li>Frameworks: React, Vue.js, Angular</li>
+            </ul>
+          </li>
+          <li>Backend
+            <ul>
+              <li>Linguagens: Python, Java, Node.js</li>
+              <li>Bancos de Dados: MySQL, PostgreSQL</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <p><a href="../index.html" class="btn-voltar">← Voltar à página principal</a></p>
+</body>
+</html>

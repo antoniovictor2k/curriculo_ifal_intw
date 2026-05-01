@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notas Bimestrais — Cap. 4 / Ativ. 2</title>
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #34495e;
+      --accent-color: #3498db;
+      --bg-light: #f9f9f9;
+      --text-dark: #333;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background-color: #f0f2f5;
+      color: var(--text-dark);
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 900px;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden; /* Para as bordas arredondadas funcionarem */
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    caption {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: var(--secondary-color);
+    }
+
+    /* Cabeçalhos */
+    thead {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    th {
+      padding: 15px;
+      border: 1px solid rgba(255,255,255,0.1);
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    /* Células de dados */
+    td {
+      padding: 12px 15px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+      border-right: 1px solid #eee;
+    }
+
+    /* Coluna dos nomes (scope="row") */
+    tbody th {
+      background-color: var(--bg-light);
+      color: var(--primary-color);
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* Rodapé */
+    tfoot {
+      background-color: #ecf0f1;
+      font-weight: bold;
+    }
+
+    tfoot th, tfoot td {
+      border-top: 2px solid var(--primary-color);
+      color: var(--primary-color);
+    }
+
+    /* Cores condicionais (Exemplo manual via lógica de estilo) */
+    /* Se quiser destacar notas baixas, você pode adicionar classes, 
+       mas aqui vamos manter o padrão limpo */
+
+    tbody tr:hover {
+      background-color: #f1f7ff;
+    }
+
+    .voltar {
+      margin-top: 30px;
+      text-decoration: none;
+      color: var(--accent-color);
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+
+    .voltar:hover {
+      color: var(--primary-color);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Relatório de Desempenho Acadêmico</h1>
+
+  <table>
+    <caption>Notas Bimestrais — Turma SI-2026, 3º Período</caption>
+
+    <thead>
+      <tr>
+        <th scope="col" rowspan="2">Aluno</th>
+        <th scope="colgroup" colspan="4">Bimestres</th>
+        <th scope="col" rowspan="2">Média Final</th>
+      </tr>
+      <tr>
+        <th scope="col">1º Bim.</th>
+        <th scope="col">2º Bim.</th>
+        <th scope="col">3º Bim.</th>
+        <th scope="col">4º Bim.</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th scope="row">Ana Souza</th>
+        <td>8.5</td><td>9.0</td><td>7.5</td><td>8.0</td><td>8.25</td>
+      </tr>
+      <tr>
+        <th scope="row">Bruno Lima</th>
+        <td>7.0</td><td>6.5</td><td>8.0</td><td>7.5</td><td>7.25</td>
+      </tr>
+      <tr>
+        <th scope="row">Carla Dias</th>
+        <td>10.0</td><td>9.5</td><td>9.0</td><td>10.0</td><td>9.62</td>
+      </tr>
+      <tr>
+        <th scope="row">Diego Silva</th>
+        <td>5.5</td><td>6.0</td><td>4.5</td><td>7.0</td><td>5.75</td>
+      </tr>
+      <tr>
+        <th scope="row">Elena Rosa</th>
+        <td>9.0</td><td>8.5</td><td>8.5</td><td>9.0</td><td>8.75</td>
+      </tr>
+      <tr>
+        <th scope="row">Fabio Paz</th>
+        <td>6.0</td><td>7.0</td><td>7.5</td><td>6.5</td><td>6.75</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <th scope="row">Média da turma</th>
+        <td>7.66</td>
+        <td>7.75</td>
+        <td>7.50</td>
+        <td>8.00</td>
+        <td>7.72</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <a href="../index.html" class="voltar">← Voltar à página principal</a>
+
+</body>
+</html>

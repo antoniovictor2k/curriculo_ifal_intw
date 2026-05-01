@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos Multimídia — Cap. 4 / Ativ. 4</title>
+  <style>
+    /* Reset e Variáveis */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    :root {
+      --bg-color: #1a1a2e;
+      --card-bg: #16213e;
+      --accent: #e94560;
+      --text: #e2e2e2;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 0;
+      border-bottom: 2px solid var(--card-bg);
+    }
+
+    h1 { color: var(--accent); letter-spacing: 1px; }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: #0f3460;
+      background: #fff;
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 4px;
+    }
+
+    /* Estilização Multimídia */
+    figure {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Torna vídeos e iframes responsivos */
+    video, iframe, picture img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #0f3460;
+    }
+
+    audio {
+      width: 100%;
+      max-width: 500px;
+      margin: 20px 0;
+    }
+
+    figcaption {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #95a5a6;
+      text-align: center;
+      font-style: italic;
+    }
+
+    figcaption a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      padding: 20px;
+      font-size: 0.85rem;
+      border-top: 1px solid var(--card-bg);
+    }
+
+    footer a { color: var(--accent); text-decoration: none; font-weight: bold; }
+
+    /* Estilo para links de fallback */
+    video p, audio p {
+      padding: 20px;
+      background: #c0392b;
+      color: white;
+      border-radius: 5px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Recursos Multimídia — Programação Web 1</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Aula em Vídeo</h2>
+      <figure>
+        <video controls width="800" height="450" poster="poster-aula.jpg" preload="metadata">
+          <source src="videos/aula-html.mp4" type="video/mp4">
+          <source src="videos/aula-html.webm" type="video/webm">
+          <track kind="subtitles" src="legendas/aula-html.vtt" srclang="pt" label="Português" default>
+          <p>Seu navegador não suporta vídeo HTML5. <a href="videos/aula-html.mp4">Baixe o vídeo aqui</a>.</p>
+        </video>
+        <figcaption>Vídeo 1 — Introdução ao HTML Semântico. Produção própria, IFAL, 2026.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Podcast da Disciplina</h2>
+      <figure>
+        <audio controls preload="metadata">
+          <source src="audio/podcast.mp3" type="audio/mpeg">
+          <source src="audio/podcast.ogg" type="audio/ogg">
+          <p>Seu navegador não suporta áudio HTML5. <a href="audio/podcast.mp3">Baixe o áudio aqui</a>.</p>
+        </audio>
+        <figcaption>Episódio 05: O Futuro da Web. <a href="transcricao.html">Leia a transcrição</a>.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Vídeo Externo</h2>
+      <figure>
+        <iframe width="800" height="450" 
+                src="https://www.youtube-nocookie.com/embed/S9uPNppGsGo" 
+                title="Tutorial de HTML5 e Semântica" 
+                loading="lazy" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+        <figcaption>Vídeo Complementar — Canal DevMedia, via YouTube.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Banner Responsivo</h2>
+      <figure>
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/banner-wide.jpg">
+          <img src="img/banner-mobile.jpg" alt="Estudante programando em um ambiente moderno" width="400" height="300">
+        </picture>
+        <figcaption>Banner ilustrativo da área de tecnologia. (Técnica de <strong>Art Direction</strong> com <em>&lt;picture&gt;</em>).</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>Atividade 4 — Capítulo 4 | Programação Web 1 | Aluno: Seu Nome | Matrícula: 123456 | <time datetime="2026-05-01">Maio de 2026</time></p>
+    <p><a href="../index.html">← Voltar à página principal</a></p>
+  </footer>
+
+</body>
+</html>
